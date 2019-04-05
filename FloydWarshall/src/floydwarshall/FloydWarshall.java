@@ -1,20 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package floydwarshall;
 
-/**
- * sa
- *
- * @author fciceri
- */
 public class FloydWarshall {
 
-    /**
-     * @param args the command line arguments
-     */
+     static int INF=999;     
+    static int[][] M = {    
+                        {0  , INF, 9,  2, INF}, 
+                        {2, 0  , INF,  INF, INF}, 
+                        {INF, 2, 0  ,  2, 3}, 
+                        {1, INF, INF,  0  , 4}, 
+                        {INF, 2, INF,  INF, 0  }, 
+                                
+                       };
     static void FloydWarshall(int grafo[][]) {
         int n = grafo.length, temp;
         //crear matriz de distancia
